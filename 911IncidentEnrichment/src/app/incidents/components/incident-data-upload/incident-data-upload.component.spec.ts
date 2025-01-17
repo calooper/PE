@@ -8,9 +8,8 @@ describe('IncidentDataUploadComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IncidentDataUploadComponent]
-    })
-    .compileComponents();
+      imports: [IncidentDataUploadComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(IncidentDataUploadComponent);
     component = fixture.componentInstance;

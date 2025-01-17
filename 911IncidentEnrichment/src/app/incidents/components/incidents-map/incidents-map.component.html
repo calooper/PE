@@ -1,1 +1,6 @@
-<div id="map" style="height: 400px;"></div>
+<div [ngClass]="{ 'map-details': showDetails }">
+  <div id="map" style="height: 500px"></div>
+  @if (showDetails) {
+    <app-incident-details></app-incident-details>
+  }
+</div>

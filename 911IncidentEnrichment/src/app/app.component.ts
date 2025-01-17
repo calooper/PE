@@ -1,4 +1,4 @@
-import {  Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { IncidentDetailsComponent } from './incidents/components/incident-details/incident-details.component';
 

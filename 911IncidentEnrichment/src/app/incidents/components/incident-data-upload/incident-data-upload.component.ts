@@ -9,7 +9,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { IncidentService } from '../../services/state/incident.service';
 import { WeatherRequestParams } from '../../models/weather-query.interface';
-import { IncidentData } from '../../models/incident-details.interface';
 @Component({
   selector: 'app-incident-data-upload',
   standalone: true,
@@ -22,18 +21,20 @@ import { IncidentData } from '../../models/incident-details.interface';
     MatListModule,
     MatInputModule,
     CommonModule,
-    MatIconModule, 
-    DragDropModule, 
+    MatIconModule,
+    DragDropModule,
   ],
   templateUrl: './incident-data-upload.component.html',
-  styleUrl: './incident-data-upload.component.scss'
+  styleUrl: './incident-data-upload.component.scss',
 })
 export class IncidentDataUploadComponent {
-  
   fileToUpload: File | null = null;
   weatherParams: WeatherRequestParams | null | undefined;
 
-  constructor(private readonly incidentService: IncidentService, private readonly datePipe: DatePipe){}
+  constructor(
+    private readonly incidentService: IncidentService,
+    private readonly datePipe: DatePipe,
+  ) {}
 
   onFileChange(event: any): void {
     const file = event.target.files[0];
@@ -44,12 +45,20 @@ export class IncidentDataUploadComponent {
 
   extractWeatherParams(fileData: string): WeatherRequestParams | null {
     try {
-      const parsed = JSON.parse(fileData); 
+      const parsed = JSON.parse(fileData);
       return {
         lat: parsed?.address?.latitude,
         lon: parsed?.address?.longitude,
-        start: this.datePipe.transform(parsed?.description?.event_closed, 'yyyy-MM-dd') ?? '',
-        end:  this.datePipe.transform(parsed?.description?.event_closed, 'yyyy-MM-dd') ?? '',
+        start:
+          this.datePipe.transform(
+            parsed?.description?.event_closed,
+            'yyyy-MM-dd',
+          ) ?? '',
+        end:
+          this.datePipe.transform(
+            parsed?.description?.event_closed,
+            'yyyy-MM-dd',
+          ) ?? '',
       };
     } catch (error) {
       console.error('Error parsing file data:', error);
@@ -74,23 +83,15 @@ export class IncidentDataUploadComponent {
     try {
       const parsedData = await this.parseFile(this.fileToUpload as File);
       const weatherParams = this.extractWeatherParams(parsedData);
-      this.incidentService.setIncidentData(JSON.parse(parsedData))
+      this.incidentService.setIncidentData(JSON.parse(parsedData));
       if (weatherParams) {
         this.incidentService.fetchAndSetWeatherData(weatherParams).subscribe();
       } else {
         console.error('Failed to extract weather parameters');
       }
-      this.fileToUpload = null
+      this.fileToUpload = null;
     } catch (error) {
       console.error('Error processing file:', error);
-    }
-  }
-
-  onFilesDropped(event: any) {
-    const file = event?.target?.files[0];
-    if (file) {
-      this.fileToUpload = file;
-      this.sendToMap();
     }
   }
 }

@@ -1,0 +1,26 @@
+.json-card {
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: auto;
+  max-height: 500px;
+}
+
+.json-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  max-height: 500px;
+  overflow-y: auto;
+  font-family: "Courier New", Courier, monospace;
+}
+
+json-viewer {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+mat-card-title {
+  background-color: #3700b3;
+  color: #fff;
+  width: 100%;
+}
