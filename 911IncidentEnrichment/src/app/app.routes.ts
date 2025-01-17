@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { IncidentDataUploadComponent } from './incidents/components/incident-data-upload/incident-data-upload.component';
+import { IncidentOverviewComponent } from './incidents/components/incident-overview/incident-overview.component';
 
 export const routes: Routes = [
-    { path: '', component: IncidentDataUploadComponent},
+    { path: '', component: IncidentOverviewComponent},
     {
         path: '**',
-        component: IncidentDataUploadComponent
+        component: IncidentOverviewComponent
     }, 
 ];
