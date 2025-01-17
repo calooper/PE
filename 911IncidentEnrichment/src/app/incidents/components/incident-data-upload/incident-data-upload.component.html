@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-card-title>Upload a File</mat-card-title>
+  
+    <div appFileDragAndDrop (filesDropped)="onFilesDropped($event)">
+      <div class="file-upload-container">
+            <h5>Drag and drop a file here</h5>
+            <h5>or</h5>
+          <div >
+            <label for="upload-file">
+              <button mat-raised-button color="primary" (click)="upload.click()">Browse for files</button>
+              <input
+                type="file"
+                id="upload-file"
+                #upload
+                accept=".json"
+                (change)="onFileChange($event)" />
+            </label>
+            <p class="accepted-file-types" >Accepted file types: JSON</p>
+          </div>
+        </div>
+      </div>
+
+
+    <mat-divider></mat-divider>
+  
+    <p *ngIf="fileToUpload">Selected file: {{ fileToUpload.name }}</p>
+    
+    <div *ngIf="locationData && locationData.length">
+      <mat-list>
+        <mat-list-item *ngFor="let location of locationData">
+          Latitude: {{ location?.lat }}, Longitude: {{ location?.lon }}
+        </mat-list-item>
+      </mat-list>
+    </div>
+  
+    <button 
+      mat-raised-button
+      color="primary"
+      *ngIf="locationData && locationData.length"
+      (click)="sendToMap()">
+      Add to Map
+    </button>
+  </mat-card>
+  
