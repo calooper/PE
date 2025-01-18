@@ -1,4 +1,4 @@
-import { Injectable, Signal, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { IncidentHttpService } from '../http/incident-http.service';
 import { WeatherRequestParams } from '../../models/weather-query.interface';

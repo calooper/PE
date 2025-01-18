@@ -1,7 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { IncidentService } from '../../services/state/incident.service';
-import { JsonPipe } from '@angular/common';
-import { CommonModule } from '@angular/common';
+import { JsonPipe, CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
