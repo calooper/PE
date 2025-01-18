@@ -28,3 +28,11 @@
 
 # About how much time did you spend on the project?
 ~ 4 hours to get it to MVP and then another couple making it look better. 
+
+![image](https://github.com/user-attachments/assets/6d71f11f-7e00-485e-952a-02f5bf2a5126)
+
+![image](https://github.com/user-attachments/assets/ad9a4045-4563-49e1-8d12-95dc2ec839ce)
+
+![image](https://github.com/user-attachments/assets/60f9a11f-4aaa-45f6-bb9b-7433dc99f6bf)
+
+
