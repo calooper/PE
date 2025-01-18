@@ -1,0 +1,25 @@
+<label for="upload-file">
+  <button mat-raised-button color="primary" (click)="upload.click()">
+    Browse files
+  </button>
+  <input
+    type="file"
+    id="upload-file"
+    #upload
+    accept=".json"
+    (change)="onFileChange($event)"
+  />
+</label>
+<p class="accepted-file-types">Accepted file types: JSON</p>
+
+<mat-divider></mat-divider>
+
+<p *ngIf="fileToUpload">Selected file: {{ fileToUpload.name }}</p>
+<button
+  mat-raised-button
+  color="primary"
+  *ngIf="fileToUpload"
+  (click)="sendToMap()"
+>
+  Add to Map
+</button>
