@@ -2,12 +2,12 @@
 # Steps to install and run your project. Assume the user will be on OSX but if you do not have access to an OSX machine, provide the needed steps to run your app on any other OS.
 
 - run the following commands: 
-1. git clone https://github.com/calooper/PE.git
-2. cd PE/911IncidentEnrichment/
-3. npm install
-4. ng serve
+1. `git clone https://github.com/calooper/PE.git`
+2. `cd PE/911IncidentEnrichment/`
+3. `npm install`
+4. `ng serve`
 
-- open http://localhost:4200/incident-details
+- open: http://localhost:4200/PE/incident-details
 - Click the 'Browse Files' button
 - Select an appropriate .json file
 - Click "Add to map"
