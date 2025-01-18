@@ -2,10 +2,20 @@
 # Steps to install and run your project. Assume the user will be on OSX but if you do not have access to an OSX machine, provide the needed steps to run your app on any other OS.
 
 - run the following commands: 
+- run the following commands: 
 1. `git clone https://github.com/calooper/PE.git`
 2. `cd PE/911IncidentEnrichment/`
+
+
+NOTE: you may need to install node to run npm
+  - `nvm install node` (or whichever packer manager you're using)
 3. `npm install`
+
+NOTE: you may need to install angular to run ng
+- `nvm install -g @agnular/cli`
 4. `ng serve`
+
+(I have only tested in Google chrome)
 
 - open: http://localhost:4200/PE/incident-details
 - Click the 'Browse Files' button
