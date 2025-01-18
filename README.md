@@ -12,7 +12,7 @@ NOTE: you may need to install node to run npm
 3. `npm install`
 
 NOTE: you may need to install angular to run ng
-- `nvm install -g @agnular/cli`
+- `nvm install -g @angular/cli`
 4. `ng serve`
 
 (I have only tested in Google chrome)
