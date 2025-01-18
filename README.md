@@ -26,18 +26,19 @@ NOTE: you may need to install angular to run ng
 
 # What improvements would you make or best practices would you utilize if you had double the time?
 - I would enhance the UI experience by adding better visualizations to the map, rather than just a parsed JSON.
-- Improve error handling and data validation
-- Define types a little better
+- Adding in custom markers for the map.
+- Add the ability to toggle between a couple TMS servers )(open steet, open topo, etc..)
+- Improve error handling and data validation, especailly for the parsing
 - use a .env
 - Add a snackbar for user feedback.
 - Add test coverage.
-- Add e2e tests.
-- Add user documentation (how-to and help guide)
+- Stretch goal: add in a user help guide.
 - Would be nice to containerize it
+- I was aiming to use most of the newer angular practices (stand-alone components, newer ngIf/ngFor syntax, signals), which I am still getting used to, but I would have liked to implement that more. 
 
 
 # About how much time did you spend on the project?
-~ 4 hours to get it to MVP and then another couple making it look better. 
+~ 4 hours to get it to MVP and then another couple making it look/ function a little better. And then about an hour later tonight making sure it worked on my old Mac, which took awhile to get things installed. Overall, this was fun and I enjoyed getting to start a project from scratch.  
 
 ![image](https://github.com/user-attachments/assets/6d71f11f-7e00-485e-952a-02f5bf2a5126)
 
